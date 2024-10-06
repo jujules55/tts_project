@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    justify-content: space-around;
+}
+
+#form {
+    border: solid black 1px;
+    padding: 10px;
+}
+
+#text, #langs, #voices{
+    margin-left: 3em;
+}
+
+button{
+    display: block;
+    margin: 10px;
+    padding: 10px;
+}
+
+canvas{
+    border: solid black 1px;
+    width: 400px;
+    height: 150px;
+}
+
+#visualisation{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}

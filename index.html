@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Ma Première interface TTS</title>
+    <link rel="stylesheet" type="text/css" href="./style/main.css">
+    <script src="./script/speech.js" type="module"></script>
+</head>
+
+<body>
+
+    <div id="form">
+
+        <h3>Choisissez un texte à prononcer :</h3>
+        <!-- input pour récuperer le texte à prononcer -->
+        <input type="text" id="text" value="test">
+
+        <h3>Choisissez la langue du texte :</h3>
+        <!-- select à remplir de balise option selon les langues présente dans param.js -->
+        <select name="langue" id="langs">
+            <option value="">-- choisissez une langue --</option>
+        </select>
+
+        <h3>Selectionnez une voix parmis celles disponibles pour la langue :</h3>
+        <!-- select à remplir de balise option selon les voix existante pour la langue choisis -->
+        <select name="voice" id="voices">
+            <option value="">-- choisissez une voix --</option>
+        </select>
+
+        <h3>Changement du ptich :</h3>
+        <!-- input pour activer ou non la variation du pitch -->
+        <input type="checkbox" name="pitch_on" id="pitch_on">
+        <label for="pitch_on">activer la variation du pitch</label>
+        <br>
+        <!-- input pour récuperer la valeur de variation du pitch -->
+        <input type="range" id="pitch_value" min="-1200" max="1200" step="100">
+        <label for="pitch_value">valeur de variation du pitch</label>
+
+        <!-- lancement de la prononciation du texte -->
+        <button id="start">Prononcer le texte</button>
+
+    </div>
+
+    <div id="visualisation">
+        <div>
+            <h3>visualisation de la forme de l'onde :</h3>
+            <canvas id="onde"></canvas>
+        </div>
+        <div>
+            <h3>visualisation dans le domaine fréquentiel :</h3>
+            <canvas id="freq"></canvas>
+        </div>
+    </div>
+
+</body>
+
+</html>
